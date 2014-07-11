@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.4
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIT", "AIT\AIT.csproj", "{EA17033A-6968-41F2-AA4A-CA5CF336C0CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA17033A-6968-41F2-AA4A-CA5CF336C0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA17033A-6968-41F2-AA4A-CA5CF336C0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA17033A-6968-41F2-AA4A-CA5CF336C0CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA17033A-6968-41F2-AA4A-CA5CF336C0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal
