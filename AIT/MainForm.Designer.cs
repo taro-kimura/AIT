@@ -36,8 +36,6 @@ namespace AIT
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.lab_before = new System.Windows.Forms.Label();
-            this.lab_after = new System.Windows.Forms.Label();
             this.butt_translate = new System.Windows.Forms.Button();
             this.comb_before = new System.Windows.Forms.ComboBox();
             this.comb_after = new System.Windows.Forms.ComboBox();
@@ -47,24 +45,10 @@ namespace AIT
             this.butt_value = new System.Windows.Forms.Button();
             this.butt_teach = new System.Windows.Forms.Button();
             this.pic_occ = new System.Windows.Forms.PictureBox();
+            this.text_before = new System.Windows.Forms.TextBox();
+            this.text_after = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_occ)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lab_before
-            // 
-            this.lab_before.BackColor = System.Drawing.SystemColors.Window;
-            this.lab_before.Location = new System.Drawing.Point(12, 51);
-            this.lab_before.Name = "lab_before";
-            this.lab_before.Size = new System.Drawing.Size(188, 279);
-            this.lab_before.TabIndex = 0;
-            // 
-            // lab_after
-            // 
-            this.lab_after.BackColor = System.Drawing.SystemColors.Window;
-            this.lab_after.Location = new System.Drawing.Point(343, 51);
-            this.lab_after.Name = "lab_after";
-            this.lab_after.Size = new System.Drawing.Size(188, 279);
-            this.lab_after.TabIndex = 1;
             // 
             // butt_translate
             // 
@@ -148,11 +132,31 @@ namespace AIT
             this.pic_occ.TabIndex = 10;
             this.pic_occ.TabStop = false;
             // 
+            // text_before
+            // 
+            this.text_before.Location = new System.Drawing.Point(12, 49);
+            this.text_before.Multiline = true;
+            this.text_before.Name = "text_before";
+            this.text_before.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.text_before.Size = new System.Drawing.Size(188, 280);
+            this.text_before.TabIndex = 11;
+            // 
+            // text_after
+            // 
+            this.text_after.Location = new System.Drawing.Point(343, 49);
+            this.text_after.Multiline = true;
+            this.text_after.Name = "text_after";
+            this.text_after.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.text_after.Size = new System.Drawing.Size(188, 280);
+            this.text_after.TabIndex = 12;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 343);
+            this.Controls.Add(this.text_after);
+            this.Controls.Add(this.text_before);
             this.Controls.Add(this.pic_occ);
             this.Controls.Add(this.butt_teach);
             this.Controls.Add(this.butt_value);
@@ -162,12 +166,11 @@ namespace AIT
             this.Controls.Add(this.comb_after);
             this.Controls.Add(this.comb_before);
             this.Controls.Add(this.butt_translate);
-            this.Controls.Add(this.lab_after);
-            this.Controls.Add(this.lab_before);
             this.Name = "MainForm";
             this.Text = "AIT";
             ((System.ComponentModel.ISupportInitialize)(this.pic_occ)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 		private System.Windows.Forms.Button butt_value;
@@ -176,10 +179,10 @@ namespace AIT
 		private System.Windows.Forms.RadioButton rad_alien;
 		private System.Windows.Forms.ComboBox comb_after;
 		private System.Windows.Forms.ComboBox comb_before;
-		private System.Windows.Forms.Button butt_translate;
-		private System.Windows.Forms.Label lab_after;
-		private System.Windows.Forms.Label lab_before;
+        private System.Windows.Forms.Button butt_translate;
         private System.Windows.Forms.Button butt_teach;
         private System.Windows.Forms.PictureBox pic_occ;
+        private System.Windows.Forms.TextBox text_before;
+        private System.Windows.Forms.TextBox text_after;
 	}
 }
