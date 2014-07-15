@@ -73,12 +73,11 @@ namespace AIT
 
             public string word;
 
-            // 
-            public ReadCSV(string word)
+            public ReadCSV(string prm_word)
             {
 
                 // 読み込むテキストファイルが入っているディレクトリ
-                string possessive_dir = System.IO.Path.GetFullPath(@"./possessive");
+                string possessive_dir = System.IO.Path.GetFullPath(@"./lib");
 
                 // 読み込んだ一行を格納する変数
                 string line = "";
@@ -89,43 +88,63 @@ namespace AIT
                 // 読み込んだ単語を格納する変数
                 string r_word = "";
 
-                if (word != "")
+                if (prm_word != "")
                 {
-                    using (StreamReader sr = new StreamReader(possessive_dir + "\\" + word + ".csv", Encoding.GetEncoding("shift_jis")))
+                    using (StreamReader sr = new StreamReader(possessive_dir + "\\possessive.csv", Encoding.GetEncoding("shift_jis")))
                     {
                         // 一行ずつ読み込み
                         while ((line = sr.ReadLine()) != null)
                         {
                             // 配列 arrWords に取得したデータを格納
                             // -> arrWords[0] = 単語の得点
-                            // -> arrWords[1] = 単語
+                            // -> arrWords[1] = 単語(英語)
+                            // -> arrWords[2] = 単語(日本語)
                             string[] arrWords = line.Split(',');
 
-                            // 単語の得点が高いほうを残す
-                            if (int.Parse(arrWords[0]) > point)
+                            // 英語 -> 日本語の場合
+                            if (arrWords[1] == prm_word)
                             {
-                                point = int.Parse(arrWords[0]);
-                                r_word = arrWords[1];                                
+
+                                // 単語の得点が高いほうを残す
+                                if (int.Parse(arrWords[0]) > point)
+                                {
+                                    point = int.Parse(arrWords[0]);
+                                    r_word = arrWords[2];
+                                }
+                                else
+                                {
+                                    Random rnd = new Random();
+
+                                    int num_random = rnd.Next(100);
+
+                                    if (num_random % 2 == 0)
+                                    {
+                                        point = int.Parse(arrWords[0]);
+                                        r_word = arrWords[2];
+                                    }
+                                }
                             }
                         }
 
                         sr.Close();
                     }
 
-                    if (r_word != "")
-                    {
-                        this.word = r_word;
-                    }
-                    else
-                    {
-                        this.word = word;
-                    }
                 }
+
+                if (r_word != "")
+                {
+                    this.word = r_word;
+                }
+                else
+                {
+                    this.word = prm_word;
+                }
+                
             }
 
             public string Word
             {
-                set { this.word = value; }
+                set{this.word = value;}
                 get { return this.word; }
             }
 
