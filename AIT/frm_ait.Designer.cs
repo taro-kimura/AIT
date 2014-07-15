@@ -59,6 +59,7 @@ namespace AIT
             this.butt_translate.TabIndex = 2;
             this.butt_translate.Text = "TRANSLATE";
             this.butt_translate.UseVisualStyleBackColor = true;
+            this.butt_translate.Click += new System.EventHandler(this.butt_translate_Click);
             // 
             // comb_before
             // 
@@ -140,7 +141,6 @@ namespace AIT
             this.text_before.Location = new System.Drawing.Point(12, 49);
             this.text_before.Multiline = true;
             this.text_before.Name = "text_before";
-            this.text_before.ReadOnly = true;
             this.text_before.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.text_before.Size = new System.Drawing.Size(188, 267);
             this.text_before.TabIndex = 11;
