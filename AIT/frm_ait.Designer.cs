@@ -151,7 +151,6 @@ namespace AIT
             this.text_after.Location = new System.Drawing.Point(348, 49);
             this.text_after.Multiline = true;
             this.text_after.Name = "text_after";
-            this.text_after.ReadOnly = true;
             this.text_after.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.text_after.Size = new System.Drawing.Size(188, 267);
             this.text_after.TabIndex = 12;
